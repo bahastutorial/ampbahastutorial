@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Random Post</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style>
+body {
+  background-color:transparent;
+  margin:0;
+  padding:0;
+  color:#333;
+  font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
+a {
+  text-decoration:none;
+  transition:all 400ms ease-in-out;
+}
+
+.box-short,.box-short-quick{padding:22px;background:#552a86;margin:9px auto;width:80%;border-radius:5px;color:#fff;text-align:center;overflow:hidden;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)}
+.box-short .result a{background:#ffffff;color:#552a86;padding:10px 20px;font-style:normal;font-size:14px;font-weight:600;display:inline-block;border-radius:5px;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.1);box-shadow:0 5px 5px rgba(0,0,0,0.1);margin:24px auto}
+.box-short #stimer{background:#ffffff;margin:0 5px;border-radius:50px;border:1px solid #555555c7;color:#552a86;width:40px;height:40px;line-height:40px;display:inline-table}
+.box-short #skipbtn{border:0;background:transparent;font-family:inherit;margin:34px auto;color:#fff}
+.box-short-quick i.fa-link{font-size:28px;background:#fff;padding:12px;color:#46315e;border-radius:50px;width:50px;height:50px;margin:13px auto}
+.box-short-quick .tools-quick{padding:8px}
+.box-short-quick .tools-quick input{padding:1em;border:1px solid #46315e;font-family:inherit;width:100%;margin:8px auto}
+.box-short-quick .tools-quick button{background:#fff;padding:10px 16px;border:0;font-family:inherit;cursor:pointer}
+.box-short-quick .result-short{text-align:center;border:0;margin:0 auto;margin-bottom:14px;width:76%;height:0;overflow:hidden;display:block;transition:all .4s ease-in-out}
+.box-short-quick .result-short.done{height:40px;transition:all .4s ease-in-out}
+
+</style>
+</head>
+<body>
+
+<i class="abdoutech-com-shortlink" data-wait="15"></i>
+<script>
+!function(){var e=document.createElement("script")
+e.type="text/javascript",e.async=!0,e.src="https://cdn.jsdelivr.net/gh/abdelalilebbihi/abdou_tech/gadget/short-link-page.js"
+var t=document.getElementsByTagName("script")[0]
+t.parentNode.insertBefore(e,t)}();
+</script>
+<script>
+var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"",widgetStyle:1,homePage:"https://www.bahastutorial.com/",numPosts:7,summaryLength:370,titleLength:"auto",thumbnailSize:168,noImage:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC",containerId:"related-post",newTabLink:false,moreText:"Baca Selengkapnya",callBack:function(){}};for(var f in relatedPostConfig){d[f]=(relatedPostConfig[f]=="undefined")?d[f]:relatedPostConfig[f]}var j=function(a){var b=m.createElement("script");b.type="text/javascript";b.src=a;k.appendChild(b)},o=function(b,a){return Math.floor(Math.random()*(a-b+1))+b},l=function(a){var p=a.length,c,b;if(p===0){return false}while(--p){c=Math.floor(Math.random()*(p+1));b=a[p];a[p]=a[c];a[c]=b}return a},h=function(b){var c=b.feed.openSearch$totalResults.$t-d.numPosts,a=o(1,(c>0?c:1));j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary?alt=json-in-script&orderby=updated&start-index="+a+"&max-results="+d.numPosts+"&callback=showRelatedPost")},g=function(z){var s=document.getElementById(d.containerId),x=l(z.feed.entry),A=d.widgetStyle,c=d.widgetTitle+'<ul class="related-post-style-'+A+'">',b=d.newTabLink?' target="_blank"':"",y='<span style="display:block;clear:both;"></span>',v,t,w,r,u;if(!s){return}for(var q=0;q<d.numPosts;q++){if(q==x.length){break}t=x[q].title.$t;w=(d.titleLength!=="auto"&&d.titleLength<t.length)?t.substring(0,d.titleLength)+"&hellip;":t;r=("media$thumbnail"in x[q]&&d.thumbnailSize!==false)?x[q].media$thumbnail.url.replace(/\/s[0-9]+(\-c)?/, "/s"+d.thumbnailSize+""):d.noImage;u=("summary"in x[q]&&d.summaryLength>0)?x[q].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,"").substring(0,d.summaryLength)+"&hellip;":"";for(var p=0,a=x[q].link.length;p<a;p++){v=(x[q].link[p].rel=="alternate")?x[q].link[p].href:"#"}if(A==2){c+='<li><a href="'+v+'" title="'+t+'"'+b+' target="_blank"><div class="related-post-item-thumbnail"><img alt="" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></div></a><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+'</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+'</span> <a href="'+v+'" class="related-post-item-more"'+b+">"+d.moreText+"</a></span>"+y+"</li>"}else{if(A==3||A==4){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="'+v+'"'+b+' target="_blank"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+"</a></div>"+y+"</li>"}else{if(A==5){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-wrapper" href="'+v+'" title="'+t+'"'+b+' target="_blank"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"><span class="related-post-item-tooltip">'+w+"</span></a>"+y+"</li>"}else{if(A==6){c+='<li><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+'</a><div class="related-post-item-tooltip"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+"</span></span>"+y+"</div></li>"}else{c+='<li><a title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+"</a></li>"}}}}}s.innerHTML=c+="</ul>"+y;d.callBack()};randomRelatedIndex=h;showRelatedPost=g;j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")})(window,document,document.getElementsByTagName("head")[0]);
+</script>
+
+</body>
+</html>
